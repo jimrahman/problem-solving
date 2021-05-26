@@ -1,0 +1,18 @@
+def HeapAlgo(list, len_list):
+
+    if len_list == 1:
+        print(list)
+        return
+    for i in range(len_list):
+        HeapAlgo(list, len_list-1)
+
+        if len_list%2 == 0:
+            list[i], list[len_list-1] = list[len_list-1], list[i]
+        else:
+            list[0], list[len_list-1] = list[len_list-1], list[i]
+
+
+alist=[4,5,7,9,1]
+len_alist = len(alist)
+
+HeapAlgo(alist, len_alist)
