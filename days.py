@@ -6,20 +6,20 @@ def get_day(day, num):
     for i in range(len(days)):
         if days[i] == day:
             if num > 7:
-                mod = num %7 + i
+                mod = num % 7 + i
                 if mod > 7:
-                    get = mod %7
+                    get = mod % 7
                     return days[get]
                 else:
                     get = 7 - mod
                     return days[get]
             else:
-                if ( i +num) < 6:
-                    get = i +num
+                if (i + num) < 6:
+                    get = i + num
                     return days[get]
                 else:
                     get = (i + num) - 7
                     return days[get]
 
 
-print(get_day("Fri", 6))
+print(get_day("Fri", 1))
